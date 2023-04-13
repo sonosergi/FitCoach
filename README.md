@@ -13,7 +13,7 @@ FitCoach is a cutting-edge fitness app that uses advanced computer vision and de
 :construction: PROJECT IN DEVELOPMENT :construction:
 </h4>
 
-*FitCoach is currently in development and not available for installation. Stay tuned for updates on our progress.
+*FitCoach is currently in development and not available for installation. Stay tuned for updates on our progress.*
 
 ### Contributing
 
