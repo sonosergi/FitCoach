@@ -1,13 +1,22 @@
 # FitCoach
 
-Your Personal Virtual Trainer with Computer Vision and Deep Learning.
+FitCoach is a cutting-edge fitness app that uses advanced computer vision and deep learning algorithms to provide personalized advice and real-time feedback to help users achieve their fitness goals. By analyzing body movements, FitCoach automatically categorizes and labels a comprehensive database of exercises, allowing for tailored recommendations to optimize posture and technique.
 
-## FitCoach 
+## Features
 
-The cutting-edge fitness app that leverages computer vision models and deep learning algorithms to classify exercises and analyze body movements, providing personalized advice and feedback in real time. With seamless integration of hardware devices, FitCoach helps you achieve your fitness goals efficiently and effectively. Join the Fitness Revolution
+* Advanced computer vision and deep learning algorithms to analyze body movements and classify exercises.
+* Personalized advice and real-time feedback to optimize posture and technique.
 
-## Current Status
+### Installation
 
 <h4 align="center">
 :construction: PROJECT IN DEVELOPMENT :construction:
 </h4>
+
+****FitCoach is currently in development and not available for installation. Stay tuned for updates on our progress.
+
+## Contributing
+
+We welcome contributions from the open-source community. To contribute, please fork the repository and submit a pull request with your proposed changes.
+
+
