@@ -19,4 +19,6 @@ FitCoach is a cutting-edge fitness app that uses advanced computer vision and de
 
 We welcome contributions from the open-source community. To contribute, please fork the repository and submit a pull request with your proposed changes.
 
-
+<h4 align="center">
+:construction: PROJECT IN DEVELOPMENT :construction:
+</h4>
