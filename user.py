@@ -36,46 +36,8 @@ class User:
         self.conn.commit()
         self.conn.close()
 
-
-    def change_password(self):
-        old_password = input("Enter your current password: ")
-        if old_password != self.profile['password']:
-            print("Incorrect password.")
-            return False
-        new_password = input("Enter your new password: ")
-        confirm_password = input("Confirm your new password: ")
-        if new_password != confirm_password:
-            print("Passwords do not match.")
-            return False
-        self.profile['password'] = new_password
-        self.cursor.execute('UPDATE users SET password = ? WHERE id = ?', (new_password, self.id))
-        self.conn.commit()
-        print("Password changed successfully.")
-        return True
-
-    def login(self, nickname, password):
-        self.cursor.execute('SELECT * FROM users WHERE nickname = ? AND password = ?', (nickname, password))
-        user = self.cursor.fetchone()
-        if user:
-            self.profile['id'] = user[0]
-            self.profile['nickname'] = user[1]
-            self.profile['email'] = user[2]
-            self.profile['password'] = user[3]
-            self.profile['weight'] = user[4]
-            self.profile['height'] = user[5]
-            self.profile['grassIndex'] = user[6]
-            print(f"Welcome, {self.profile['nickname']}!")
-            return True
-        else:
-            print("Incorrect credentials.")
-            return False
-
-
     def planning(self):
         pass  # OpenAI (test, goal setting, ...)
 
-if __name__ == '__main__':
-
-    user = User("johndoe2", "johndoe2@example.com", 75, 168, 13)
-    print("Usuario creado exitosamente!")
-
+    def Login(self):
+        pass
