@@ -1,52 +1,41 @@
 import sqlite3
-import json
-import string
-import random
 import uuid
+import random
+import string
 
 class User:
-    def __init__(self, nickname, email):
+    def __init__(self, nickname, email, weight, height, grassIndex):
         self.id = str(uuid.uuid4()) # generate a unique id for the user
         self.nickname = nickname
         self.email = email
-        self.profile = {
-            'id': self.id,
-            'nickname': self.nickname,
-            'email': self.email
-        }
+        length = 16  # Length of generated password
+        allowed_chars = string.ascii_letters + string.digits + string.punctuation  # Allowed characters in the password
+        password = ''.join(random.choice(allowed_chars) for i in range(length))  # Generate the password
+        self.password = password
+        self.weight = weight
+        self.height = height
+        self.grassIndex = grassIndex
 
-        self.conn = sqlite3.connect('users.db')
+        # Connect to the database and insert the user data
+        self.conn = sqlite3.connect('Madrid.db')
         self.cursor = self.conn.cursor()
 
         # Create table if it doesn't exist
         self.cursor.execute('''
-            CREATE TABLE IF NOT EXISTS users
-            (id INTEGER PRIMARY KEY, nickname TEXT, email TEXT, password TEXT, weight REAL, height REAL, grassIndex REAL)
+            CREATE TABLE IF NOT EXISTS Madrid
+            (id TEXT PRIMARY KEY,
+            nickname TEXT, 
+            email TEXT, 
+            password TEXT, 
+            weight REAL, 
+            height REAL, 
+            grassIndex REAL)
             ''')
+        instruction = f"INSERT INTO Madrid VALUES ('{self.id}', '{self.nickname}', '{self.email}', '{self.password}', {self.weight}, {self.height}, {self.grassIndex})"
+        self.cursor.execute(instruction)
         self.conn.commit()
-
-    def __del__(self):
         self.conn.close()
 
-    def biometrics(self, weight, height, grassIndex):
-        self.weight = weight
-        self.height = height
-        self.grassIndex = grassIndex
-        self.biometric_data = {
-            'weight': weight,
-            'height': height,
-            'grassIndex': grassIndex
-            }
-        return json.dumps(self.profile)
-
-    def passwordGen(self):
-        length = 16  # Length of generated password
-        allowed_chars = string.ascii_letters + string.digits + string.punctuation  # Allowed characters in the password
-        password = ''.join(random.choice(allowed_chars) for i in range(length))  # Generate the password
-        self.profile['password'] = password  # Add the 'password' key and value
-        self.cursor.execute('INSERT INTO users (nickname, email, password) VALUES (?, ?, ?)', (self.nickname, self.email, self.profile['password']))
-        self.conn.commit()
-        return json.dumps(self.profile)
 
     def change_password(self):
         old_password = input("Enter your current password: ")
@@ -84,3 +73,9 @@ class User:
 
     def planning(self):
         pass  # OpenAI (test, goal setting, ...)
+
+if __name__ == '__main__':
+
+    user = User("johndoe2", "johndoe2@example.com", 75, 168, 13)
+    print("Usuario creado exitosamente!")
+
