@@ -50,8 +50,3 @@ class Coach:
         cap.release()
         cv2.destroyAllWindows()
 
-if __name__ == '__main__':
-
-    user = User("johndoe2", "johndoe2@example.com", 75, 168, 0.13)
-    print("Usuario creado exitosamente!")
-
