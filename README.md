@@ -14,8 +14,9 @@ FitCoach is a cutting-edge fitness app that uses advanced computer vision and de
 <h4 align="center">
 :construction: PROJECT IN DEVELOPMENT :construction:
 </h4>
-
-![PoseDetection](video2.gif)
+<p align="center">
+  <img src="video2.gif" alt="PoseDetection" />
+</p>
 
 ### Contributing
 
