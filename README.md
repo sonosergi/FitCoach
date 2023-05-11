@@ -23,12 +23,12 @@ FitCoach is a cutting-edge fitness app that uses advanced computer vision and de
 <p align="center">
   <img src="Resources/ObjectDetection.gif">
   <br>
-  <em>Figura 1 - Exercise Recognition with Object Detection</em>
+  <em>Figura 2 - Exercise Recognition with Object Detection</em>
 </p>
 <p align="center">
   <img src="Resources/PoseDetection.gif">
   <br>
-  <em>Figura 1 - Detection of poses to evaluate exercise movements</em>
+  <em>Figura 3 - Detection of poses to evaluate exercise movements</em>
 </p>
 
 ### Contributing
