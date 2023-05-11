@@ -15,12 +15,12 @@ FitCoach is a cutting-edge fitness app that uses advanced computer vision and de
 :construction: PROJECT IN DEVELOPMENT :construction:
 </h4>
 
-<table align="center">
-  <tr>
-    <td><img src="videoseg.gif" width="400"></td>
-    <td><img src="PoseDetection.gif" width="400"></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="TrackSegmentation.gif">
+  <br>
+  <em>Figura 1 - Track Segmentation</em>
+</p>
+
 
 
 
